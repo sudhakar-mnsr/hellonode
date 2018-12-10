@@ -1,0 +1,13 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: docker_jenkins_test
+spec:
+  template:
+    metadata:
+      labels:
+        app: docker_jenkins_test
+    spec:
+      containers:
+      - name: docker_jenkins_test
+        image: hyperion.azurecr.io/docker_jenkins_test
